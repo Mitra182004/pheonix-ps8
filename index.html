@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PHOENIX – PS 8</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 30px;
+    }
+    button {
+      padding: 10px 15px;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>PHOENIX</h1>
+  <h3>Anonymous Campus Safety & Misconduct Reporting System</h3>
+  <p>Your identity is protected. Report safely.</p>
+
+  <h2>Report an Incident</h2>
+
+  <form onsubmit="submitReport(event)">
+    <select required>
+      <option value="">Select Incident</option>
+      <option>Harassment</option>
+      <option>Unsafe Area</option>
+      <option>Cyberbullying</option>
+      <option>Misconduct</option>
+    </select>
+    <br><br>
+
+    <textarea rows="4" placeholder="Describe incident" required></textarea>
+    <br><br>
+
+    <button type="submit">Submit Report</button>
+  </form>
+
+  <h2>Check Report Status</h2>
+
+  <input type="text" placeholder="Enter Report ID">
+  <br><br>
+  <button onclick="checkStatus()">Check Status</button>
+
+  <script>
+    function submitReport(e) {
+      e.preventDefault();
+      const id = "PHX" + Math.floor(Math.random() * 100000);
+      alert("Report Submitted!\nYour Report ID: " + id);
+    }
+
+    function checkStatus() {
+      alert("Status: Under Review");
+    }
+  </script>
+
+</body>
+</html>
